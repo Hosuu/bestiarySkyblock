@@ -1,8 +1,8 @@
 import { BESTIARY, BESTIARY_BRACKETS } from './bestiary'
 import './style.css'
-
 ;(async () => {
 	const playerName = prompt('Enter username')
+	if (!playerName) return
 
 	const response = await fetch(`https://sky.shiiyu.moe/api/v2/profile/${playerName}`)
 	const data = await response.json()
